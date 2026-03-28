@@ -1,0 +1,23 @@
+{
+  "name": "y1s1b1_restaurants",
+  "version": "1.0.0",
+  "description": "Restaurant multi-page website using Tailwind CLI",
+  "scripts": {
+    "dev:css": "npx @tailwindcss/cli -i ./assets/css/input.css -o ./assets/css/output.css --watch",
+    "build:css": "npx @tailwindcss/cli -i ./assets/css/input.css -o ./assets/css/output.css --minify",
+    "build": "npm run build:css",
+    "review": "npm run build && node ./scripts/review-checks.mjs"
+  },
+  "keywords": [
+    "tailwindcss",
+    "restaurant",
+    "static-website"
+  ],
+  "author": "Pisal HENG",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.2.2",
+    "tailwindcss": "^4.2.2"
+  }
+}

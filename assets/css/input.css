@@ -1,0 +1,142 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Manrope";
+  src: url("../fonts/Manrope-Variable.ttf") format("truetype");
+  font-weight: 200 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: url("../fonts/CormorantGaramond-Variable.ttf") format("truetype");
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Battambang";
+  src: url("../fonts/Battambang-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Battambang";
+  src: url("../fonts/Battambang-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Koulen";
+  src: url("../fonts/Koulen-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-display: "Koulen", "Cormorant Garamond", "Times New Roman", serif;
+  --font-body: "Battambang", "Manrope", "Segoe UI", sans-serif;
+
+  --color-sand-50: #fbf8f3;
+  --color-sand-100: #f3ece2;
+  --color-sand-200: #e6dac8;
+  --color-sand-700: #7a5f46;
+
+  --color-spice-400: #cf6e3f;
+  --color-spice-500: #bf5d2e;
+  --color-spice-600: #a14d23;
+
+  --color-forest-500: #2e5d4d;
+  --color-forest-700: #1e4035;
+
+  --color-night-900: #101317;
+  --color-night-800: #171d24;
+}
+
+:root {
+  color-scheme: light;
+}
+
+:root.dark {
+  color-scheme: dark;
+}
+
+body {
+  font-family: var(--font-body);
+  line-height: 1.65;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(191, 93, 46, 0.12), transparent 38%),
+    radial-gradient(circle at 80% 2%, rgba(46, 93, 77, 0.14), transparent 30%),
+    linear-gradient(140deg, #fbf8f3 0%, #f2e9dd 100%);
+}
+
+.dark body {
+  background:
+    radial-gradient(circle at 18% 16%, rgba(207, 110, 63, 0.18), transparent 38%),
+    radial-gradient(circle at 88% 0%, rgba(46, 93, 77, 0.22), transparent 30%),
+    linear-gradient(145deg, #0f1318 0%, #171d24 100%);
+}
+
+@layer components {
+  .glass-card {
+    @apply rounded-2xl border border-black/8 bg-white/80 shadow-xl shadow-black/6 backdrop-blur-sm dark:border-white/10 dark:bg-white/6 dark:shadow-black/30;
+  }
+
+  .section-title {
+    @apply font-display text-4xl font-semibold leading-tight text-night-900 md:text-5xl dark:text-white;
+  }
+
+  .pill-link {
+    @apply inline-flex items-center justify-center rounded-full border border-spice-500/40 px-5 py-2 text-sm font-semibold text-spice-600 transition hover:bg-spice-500 hover:text-white dark:border-spice-400/40 dark:text-spice-400;
+  }
+}
+
+@layer utilities {
+  .hero-overlay {
+    background:
+      linear-gradient(112deg, rgba(16, 19, 23, 0.72), rgba(16, 19, 23, 0.32)),
+      url("../images/hero-bg.jpg") center / cover no-repeat;
+  }
+
+  .fade-up {
+    animation: fade-up 650ms ease-out both;
+  }
+
+  .fade-delay-1 {
+    animation-delay: 80ms;
+  }
+
+  .fade-delay-2 {
+    animation-delay: 180ms;
+  }
+
+  .fade-delay-3 {
+    animation-delay: 280ms;
+  }
+
+  .fade-delay-4 {
+    animation-delay: 380ms;
+  }
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+

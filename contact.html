@@ -1,0 +1,98 @@
+﻿<!doctype html>
+<html lang="km">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mahob Taste | ទំនាក់ទំនង</title>
+  <meta name="description" content="ទំព័រទំនាក់ទំនង និងកក់តុរបស់ Mahob Taste">
+  <link rel="stylesheet" href="assets/css/output.css">
+</head>
+<body class="min-h-screen text-night-900 dark:text-sand-100">
+  <header class="sticky top-0 z-40 border-b border-black/10 bg-sand-50/80 backdrop-blur-md dark:border-white/10 dark:bg-night-900/80">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 md:px-8">
+      <a href="index.html" class="font-display text-3xl font-bold tracking-wide text-spice-600 dark:text-spice-400">Mahob Taste</a>
+      <nav class="hidden items-center gap-6 text-sm font-semibold md:flex">
+        <a class="hover:text-spice-600" href="index.html">ទំព័រដើម</a>
+        <a class="hover:text-spice-600" href="menu.html">មឺនុយ</a>
+        <a class="hover:text-spice-600" href="detail.html">ព័ត៌មានម្ហូប</a>
+        <a class="hover:text-spice-600" href="about.html">អំពីយើង</a>
+        <a class="text-spice-600" href="contact.html">ទំនាក់ទំនង</a>
+        <a class="pill-link" href="auth.html">ចូលប្រើ/ចុះឈ្មោះ</a>
+      </nav>
+      <div class="flex items-center gap-2">
+        <button data-theme-toggle class="rounded-full border border-black/10 px-4 py-2 text-sm font-semibold hover:border-spice-500 hover:text-spice-600 dark:border-white/20"><span data-theme-label>ភ្លឺ</span></button>
+        <button data-mobile-toggle class="rounded-lg border border-black/10 p-2 md:hidden dark:border-white/20" aria-label="បើកបិទម៉ឺនុយ">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-5 w-5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5m-16.5 5.25h16.5m-16.5 5.25h16.5" />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div data-mobile-menu class="hidden border-t border-black/10 px-4 py-4 md:hidden dark:border-white/10">
+      <div class="flex flex-col gap-3 text-sm font-semibold">
+        <a href="index.html">ទំព័រដើម</a>
+        <a href="menu.html">មឺនុយ</a>
+        <a href="detail.html">ព័ត៌មានម្ហូប</a>
+        <a href="about.html">អំពីយើង</a>
+        <a href="contact.html">ទំនាក់ទំនង</a>
+        <a href="auth.html">ចូលប្រើ/ចុះឈ្មោះ</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="mx-auto max-w-7xl px-4 py-14 md:px-8">
+    <section class="mb-8 fade-up">
+      <p class="text-sm font-semibold tracking-[0.12em] text-spice-600 dark:text-spice-400">ទំព័រទំនាក់ទំនង</p>
+      <h1 class="section-title mt-2">កក់តុ ឬ ផ្ញើសារ​មកយើង</h1>
+      <p class="mt-3 max-w-3xl text-black/75 dark:text-white/75">សម្រាប់ការកក់តុ ព្រឹត្តិការណ៍ ឬសំណួរផ្សេងៗ អ្នកអាចទំនាក់ទំនងតាមព័ត៌មានខាងក្រោម ឬបំពេញទម្រង់សារ។</p>
+    </section>
+
+    <section class="grid gap-6 lg:grid-cols-2">
+      <div class="glass-card p-6 fade-up fade-delay-1">
+        <h2 class="font-display text-3xl font-semibold">ព័ត៌មានទំនាក់ទំនង</h2>
+        <ul class="mt-5 space-y-3 text-sm text-black/80 dark:text-white/80">
+          <li><span class="font-semibold">អាសយដ្ឋាន៖</span> #137, Traing Village, Slorkram, Siem Reap, Cambodia</li>
+          <li><span class="font-semibold">អ៊ីមែល៖</span> info@mahobtaste.com</li>
+          <li><span class="font-semibold">ទូរស័ព្ទ៖</span> +855 17 376 038</li>
+          <li><span class="font-semibold">ម៉ោងបើក៖</span> ថ្ងៃត្រង់ 11:30-14:30, ល្ងាច 17:30-22:00</li>
+        </ul>
+
+        <div class="mt-6 overflow-hidden rounded-2xl border border-black/10 dark:border-white/10">
+          <iframe title="ផែនទី" class="h-64 w-full" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Siem%20Reap%20Cambodia&output=embed"></iframe>
+        </div>
+      </div>
+
+      <form class="glass-card space-y-4 p-6 fade-up fade-delay-2" action="#" method="post">
+        <h2 class="font-display text-3xl font-semibold">ទម្រង់សារ</h2>
+        <div>
+          <label class="mb-1 block text-sm font-semibold" for="contact-name">ឈ្មោះពេញ</label>
+          <input class="w-full rounded-xl border border-black/15 bg-white/70 px-4 py-3 text-sm outline-none ring-spice-500 focus:ring-2 dark:border-white/20 dark:bg-night-800" id="contact-name" type="text" required>
+        </div>
+        <div class="grid gap-4 sm:grid-cols-2">
+          <div>
+            <label class="mb-1 block text-sm font-semibold" for="contact-email">អ៊ីមែល</label>
+            <input class="w-full rounded-xl border border-black/15 bg-white/70 px-4 py-3 text-sm outline-none ring-spice-500 focus:ring-2 dark:border-white/20 dark:bg-night-800" id="contact-email" type="email" required>
+          </div>
+          <div>
+            <label class="mb-1 block text-sm font-semibold" for="contact-phone">ទូរស័ព្ទ</label>
+            <input class="w-full rounded-xl border border-black/15 bg-white/70 px-4 py-3 text-sm outline-none ring-spice-500 focus:ring-2 dark:border-white/20 dark:bg-night-800" id="contact-phone" type="tel" required>
+          </div>
+        </div>
+        <div>
+          <label class="mb-1 block text-sm font-semibold" for="contact-message">សារ</label>
+          <textarea class="h-32 w-full rounded-xl border border-black/15 bg-white/70 px-4 py-3 text-sm outline-none ring-spice-500 focus:ring-2 dark:border-white/20 dark:bg-night-800" id="contact-message" placeholder="សរសេរសំណើ ឬកំណត់ចំណាំសម្រាប់ការកក់"></textarea>
+        </div>
+        <button class="w-full rounded-xl bg-spice-500 px-4 py-3 text-sm font-semibold text-white transition hover:bg-spice-600" type="submit">ផ្ញើសារ</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="border-t border-black/10 bg-white/60 py-8 dark:border-white/10 dark:bg-night-900/60">
+    <div class="mx-auto flex max-w-7xl flex-col gap-2 px-4 text-sm md:px-8 md:flex-row md:items-center md:justify-between">
+      <p>© <span data-current-year></span>រក្សាសិទ្ធិដោយក្រុម២</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
