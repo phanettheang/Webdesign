@@ -1,107 +1,187 @@
 <!doctype html>
 <html lang="km">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>  ម្ហូប​ខ្មែរ  | Home</title>
-  <meta name="description" content="ម្ហូបថេស ភោជនីយដ្ឋានខ្មែរ ខេត្តសៀមរាប">
-  <link rel="stylesheet" href="assets/css/output.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-<body class="min-h-screen text-night-900 dark:text-sand-100">
-  <header class="sticky top-0 z-40 border-b border-black/10 bg-sand-50/80 backdrop-blur-md dark:border-white/10 dark:bg-night-900/80">
-    <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 md:px-8">
-      <a href="index.html" class="font-display text-3xl font-bold tracking-wide text-spice-600 dark:text-spice-400 flex items-center"><img src="assets/images/logo 2.png" alt="logo" width="90px" height="130px ">ម្ហូប​ខ្មែរ</a>
-      <nav class="hidden items-center gap-6 text-sm font-semibold md:flex">
-        <a class="hover:text-spice-600" href="index.html">ទំព័រដើម</a>
-        <a class="hover:text-spice-600" href="menu.html">មឺនុយ</a>
-        <a class="hover:text-spice-600" href="detail.html">ព័ត៌មានម្ហូប</a>
-        <a class="hover:text-spice-600" href="about.html">អំពីយើង</a>
-        <a class="hover:text-spice-600" href="contact.html">ទំនាក់ទំនង</a>
-        <a class="pill-link" href="auth.html">ចូលប្រើ/ចុះឈ្មោះ</a>
-      </nav>
-      <div class="flex items-center gap-2">
-        <button data-theme-toggle class="rounded-full border border-black/10 px-4 py-2 text-sm font-semibold hover:border-spice-500 hover:text-spice-600 dark:border-white/20"><span data-theme-label>ភ្លឺ</span></button>
-        <button data-mobile-toggle class="rounded-lg border border-black/10 p-2 md:hidden dark:border-white/20" aria-label="បើកបិទម៉ឺនុយ">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-5 w-5">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5m-16.5 5.25h16.5m-16.5 5.25h16.5" />
-          </svg>
-        </button>
-      </div>
-    </div>
-    <div data-mobile-menu class="hidden border-t border-black/10 px-4 py-4 md:hidden dark:border-white/10">
-      <div class="flex flex-col gap-3 text-sm font-semibold">
-        <a href="index.html">ទំព័រដើម</a>
-        <a href="menu.html">មឺនុយ</a>
-        <a href="detail.html">ព័ត៌មានម្ហូប</a>
-        <a href="about.html">អំពីយើង</a>
-        <a href="contact.html">ទំនាក់ទំនង</a>
-        <a href="auth.html">ចូលប្រើ/ចុះឈ្មោះ</a>
-      </div>
-    </div>
-  </header>
-
-  <main>
-    <section class="hero-overlay relative isolate overflow-hidden">
-      <div class="mx-auto grid min-h-[75vh] max-w-7xl items-center px-4 py-16 md:px-8 lg:grid-cols-2">
-        <div class="space-y-6 text-white fade-up">
-          <h1 class="font-display text-5xl font-bold leading-tight md:text-6xl">រសជាតិបែបខ្មែរ</h1>
-          <p class="max-w-xl text-lg text-white/90">សូមស្វាគមន៍មកកាន់ភោជនីយដ្ឋានខ្មែរដែលមានម្ហូបខ្មែរច្រើនមុខ ឆ្ងាញ់ៗ ដូចជា អាម៉ុក សម្លកកូរ និងបាយឆា។ ម្ហូបស្រស់ ស្អាត រសជាតិដើមខ្មែរ បរិយាកាសកក់ក្ដៅ សមស្របសម្រាប់គ្រប់ឱកាស។ អញ្ជើញមកសាកល្បងថ្ងៃនេះ!</p>
-          <div class="flex flex-wrap gap-3">
-            <a href="menu.html" class="rounded-full bg-spice-500 px-6 py-3 text-sm font-semibold text-white transition hover:bg-spice-600">ម៉ឺនុយ</a>
-            <a href="detail.html" class="rounded-full border border-white/35 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/12">ម្ហូបពិសេស</a>
-          </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ម្ហូប​ខ្មែរ | Home</title>
+    <meta name="description" content="ម្ហូបថេស ភោជនីយដ្ឋានខ្មែរ ខេត្តសៀមរាប" />
+    <link rel="stylesheet" href="assets/css/output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="min-h-screen text-night-900 dark:text-sand-100">
+    <header
+      class="sticky top-0 z-40 border-b border-black/10 bg-sand-50/80 backdrop-blur-md dark:border-white/10 dark:bg-night-900/80"
+    >
+      <div
+        class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 md:px-8"
+      >
+        <a
+          href="index.html"
+          class="font-display text-3xl font-bold tracking-wide text-spice-600 dark:text-spice-400 flex items-center"
+          ><img
+            src="assets/images/logo 2.png"
+            alt="logo"
+            width="90px"
+            height="130px "
+          />ម្ហូប​ខ្មែរ</a
+        >
+        <nav class="hidden items-center gap-6 text-sm font-semibold md:flex">
+          <a class="hover:text-spice-600" href="index.html">ទំព័រដើម</a>
+          <a class="hover:text-spice-600" href="menu.html">មឺនុយ</a>
+          <a class="hover:text-spice-600" href="detail.html">ព័ត៌មានម្ហូប</a>
+          <a class="hover:text-spice-600" href="about.html">អំពីយើង</a>
+          <a class="hover:text-spice-600" href="contact.html">ទំនាក់ទំនង</a>
+          <a class="pill-link" href="auth.html">ចូលប្រើ/ចុះឈ្មោះ</a>
+        </nav>
+        <div class="flex items-center gap-2">
+          <button
+            data-theme-toggle
+            class="rounded-full border border-black/10 px-4 py-2 text-sm font-semibold hover:border-spice-500 hover:text-spice-600 dark:border-white/20"
+          >
+            <span data-theme-label>ភ្លឺ</span>
+          </button>
+          <button
+            data-mobile-toggle
+            class="rounded-lg border border-black/10 p-2 md:hidden dark:border-white/20"
+            aria-label="បើកបិទម៉ឺនុយ"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="h-5 w-5"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5m-16.5 5.25h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
+          </button>
         </div>
       </div>
-      <div class="absolute bottom-0 left-0 right-0 h-28 bg-gradient-to-b from-sand-50 to-transparent dark:from-night-900"></div>
-    </section>
-
-    <section class="mx-auto -mt-12 max-w-7xl px-4 pb-16 md:px-8">
-      <div class="grid gap-6 md:grid-cols-3">
-        <article class="glass-card fade-up fade-delay-1 p-6">
-          <h2 class="mt-3 font-display text-3xl font-semibold">បន្លែ និងគ្រឿងផ្សំស្រស់ៗ</h2>
-        <p class="mt-2 text-base text-black/80 dark:text-white/80">
-        យើងប្រើបន្លែ និងគ្រឿងផ្សំស្រស់ៗពីធម្មជាតិ ដើម្បីធានារសជាតិពិសេសនៃម្ហូបខ្មែរ។ អញ្ជើញមកសាករសជាតិដ៏ឆ្ងាញ់របស់យើង!
-        </p>
-        </article>
-        <article class="glass-card fade-up fade-delay-1 p-6">
-          <h2 class="mt-3 font-display text-3xl font-semibold">ចុងភៅជំនាញ</h2>
-        <p class="mt-2 text-base text-black/80 dark:text-white/80">
-          ចុងភៅរបស់យើងមានបទពិសោធន៍ និងជំនាញខ្ពស់ ក្នុងការបង្កើតរសជាតិខ្មែរដ៏ពិសេស។ ប្រើគ្រឿងផ្សំជ្រើសរើស និងបច្ចេកទេសចម្អិន ដើម្បីធ្វើអោយមុខម្ហូបឈ្ងុយឆ្ងាញ់ និងទាក់ទាញ។
-        </p>
-        </article>
-        <article class="glass-card fade-up fade-delay-1 p-6">
-          <h2 class="mt-3 font-display text-3xl font-semibold">បរិយាកាសល្អ</h2>
-        <p class="mt-2 text-base text-black/80 dark:text-white/80"> បរិយាកាសស្ងប់ស្ងាត់ ស្អាត និងកក់ក្ដៅ សមស្របសម្រាប់ការញ៉ាំអាហារជាមួយគ្រួសារ និងមិត្តភក្តិ។
-        </p>
-        </article>
+      <div
+        data-mobile-menu
+        class="hidden border-t border-black/10 px-4 py-4 md:hidden dark:border-white/10"
+      >
+        <div class="flex flex-col gap-3 text-sm font-semibold">
+          <a href="index.html">ទំព័រដើម</a>
+          <a href="menu.html">មឺនុយ</a>
+          <a href="detail.html">ព័ត៌មានម្ហូប</a>
+          <a href="about.html">អំពីយើង</a>
+          <a href="contact.html">ទំនាក់ទំនង</a>
+          <a href="auth.html">ចូលប្រើ/ចុះឈ្មោះ</a>
+        </div>
       </div>
-    </section>
-  </main>
+    </header>
 
-  <footer class="border-t border-black/10 bg-white/60 py-8 dark:border-white/10 dark:bg-night-900/60">
-    <div class="mx-auto flex max-w-7xl flex-col gap-2 px-4 text-sm md:px-8 md:flex-row md:items-center md:justify-between">
-      <p width="50px"> <img src="assets/images/logo 2.png" alt="logo" width="90px" height="130px ">MAHOB KHMER</p>
-      <p > 
-        
- 
-<i class="fa-brands fa-tiktok text-5xl"></i>
-<i class="fa-brands fa-facebook text-5xl"></i>
-<i class="fa-brands fa-youtube text-5xl"></i>
-      </p>
-      <p>Contact
-       <Br>
-        <span class="font-semibold">Phone number:</span> 012 345 678
-  </Br>
-        <span class="font-semibold">Email:</span>mahobkhmer@gmail.com
-        <br>
-        <span class="font-semibold">Facebook: </span>Mahob Khmer
-        </Br>
-      </p>
-      <p>Sponsored and organized by <img src="assets/images/New Logo iSTAD Full-12.png" alt="logo" width="150px" height="300px "></p>
-    </div>
-  </footer>
+    <main>
+      <section class="hero-overlay relative isolate overflow-hidden">
+        <div
+          class="mx-auto grid min-h-[75vh] max-w-7xl items-center px-4 py-16 md:px-8 lg:grid-cols-2"
+        >
+          <div class="space-y-6 text-white fade-up">
+            <h1
+              class="font-display text-5xl font-bold leading-tight md:text-6xl"
+            >
+              រសជាតិបែបខ្មែរ
+            </h1>
+            <p class="max-w-xl text-lg text-white/90">
+              សូមស្វាគមន៍មកកាន់ភោជនីយដ្ឋានខ្មែរដែលមានម្ហូបខ្មែរច្រើនមុខ ឆ្ងាញ់ៗ
+              ដូចជា អាម៉ុក សម្លកកូរ និងបាយឆា។ ម្ហូបស្រស់ ស្អាត រសជាតិដើមខ្មែរ
+              បរិយាកាសកក់ក្ដៅ សមស្របសម្រាប់គ្រប់ឱកាស។ អញ្ជើញមកសាកល្បងថ្ងៃនេះ!
+            </p>
+            <div class="flex flex-wrap gap-3">
+              <a
+                href="menu.html"
+                class="rounded-full bg-spice-500 px-6 py-3 text-sm font-semibold text-white transition hover:bg-spice-600"
+                >ម៉ឺនុយ</a
+              >
+              <a
+                href="detail.html"
+                class="rounded-full border border-white/35 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/12"
+                >ម្ហូបពិសេស</a
+              >
+            </div>
+          </div>
+        </div>
+        <div
+          class="absolute bottom-0 left-0 right-0 h-28 bg-gradient-to-b from-sand-50 to-transparent dark:from-night-900"
+        ></div>
+      </section>
 
-  <script src="assets/js/main.js"></script>
-</body>
+      <section class="mx-auto -mt-12 max-w-7xl px-4 pb-16 md:px-8">
+        <div class="grid gap-6 md:grid-cols-3">
+          <article class="glass-card fade-up fade-delay-1 p-6">
+            <h2 class="mt-3 font-display text-3xl font-semibold">
+              បន្លែ និងគ្រឿងផ្សំស្រស់ៗ
+            </h2>
+            <p class="mt-2 text-base text-black/80 dark:text-white/80">
+              យើងប្រើបន្លែ និងគ្រឿងផ្សំស្រស់ៗពីធម្មជាតិ
+              ដើម្បីធានារសជាតិពិសេសនៃម្ហូបខ្មែរ។
+              អញ្ជើញមកសាករសជាតិដ៏ឆ្ងាញ់របស់យើង!
+            </p>
+          </article>
+          <article class="glass-card fade-up fade-delay-1 p-6">
+            <h2 class="mt-3 font-display text-3xl font-semibold">ចុងភៅជំនាញ</h2>
+            <p class="mt-2 text-base text-black/80 dark:text-white/80">
+              ចុងភៅរបស់យើងមានបទពិសោធន៍ និងជំនាញខ្ពស់
+              ក្នុងការបង្កើតរសជាតិខ្មែរដ៏ពិសេស។ ប្រើគ្រឿងផ្សំជ្រើសរើស
+              និងបច្ចេកទេសចម្អិន ដើម្បីធ្វើអោយមុខម្ហូបឈ្ងុយឆ្ងាញ់ និងទាក់ទាញ។
+            </p>
+          </article>
+          <article class="glass-card fade-up fade-delay-1 p-6">
+            <h2 class="mt-3 font-display text-3xl font-semibold">
+              បរិយាកាសល្អ
+            </h2>
+            <p class="mt-2 text-base text-black/80 dark:text-white/80">
+              បរិយាកាសស្ងប់ស្ងាត់ ស្អាត និងកក់ក្ដៅ
+              សមស្របសម្រាប់ការញ៉ាំអាហារជាមួយគ្រួសារ និងមិត្តភក្តិ។
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer
+      class="border-t border-black/10 bg-white/60 py-8 dark:border-white/10 dark:bg-night-900/60"
+    >
+      <div
+        class="mx-auto flex max-w-7xl flex-col gap-2 px-4 text-sm md:px-8 md:flex-row md:items-center md:justify-between"
+      >
+        <p width="50px">
+          <img
+            src="assets/images/logo 2.png"
+            alt="logo"
+            width="90px"
+            height="130px "
+          />MAHOB KHMER
+        </p>
+        <p>
+          <i class="fa-brands fa-tiktok text-5xl"></i>
+          <i class="fa-brands fa-facebook text-5xl"></i>
+          <i class="fa-brands fa-youtube text-5xl"></i>
+        </p>
+        <p>
+          Sponsored and organized by
+          <img
+            src="assets/images/New Logo iSTAD Full-12.png"
+            alt="logo"
+            width="150px"
+            height="300px "
+          />
+        </p>
+      </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
