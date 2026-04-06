@@ -61,5 +61,57 @@
     el.textContent = currentYear;
   });
 
+  const filterRoot = document.querySelector('[data-menu-filters]');
+  const menuGrid = document.querySelector('[data-menu-grid]');
+
+  if (filterRoot && menuGrid) {
+    const filterButtons = Array.from(filterRoot.querySelectorAll('[data-filter-category]'));
+    const menuItems = Array.from(menuGrid.querySelectorAll('article'));
+
+    const drinkKeywords = ['ភេសជ្ជៈ', 'ទឹក', 'ក្រឡុក', 'ល្ហុងក្រឡុក', 'កាហ្វេ', 'តែ', 'smoothie', 'juice'];
+    const dessertKeywords = ['បង្អែម', 'នំ', 'បបរ', 'ខ្ទិះ', 'ចេក', 'សាគូ', 'ត្នោត'];
+
+    const classifyMenuItem = (text) => {
+      if (drinkKeywords.some((keyword) => text.includes(keyword))) {
+        return 'ភេសជ្ជៈ';
+      }
+      if (dessertKeywords.some((keyword) => text.includes(keyword))) {
+        return 'បង្អែម';
+      }
+      return 'ម្ហូបខ្មែរ';
+    };
+
+    menuItems.forEach((item) => {
+      const text = item.textContent || '';
+      item.dataset.category = classifyMenuItem(text);
+    });
+
+    const setActiveFilter = (activeButton) => {
+      filterButtons.forEach((button) => {
+        const isActive = button === activeButton;
+        button.classList.toggle('bg-spice-500', isActive);
+        button.classList.toggle('text-white', isActive);
+        button.classList.toggle('border', !isActive);
+        button.classList.toggle('border-black/15', !isActive);
+        button.classList.toggle('dark:border-white/20', !isActive);
+      });
+    };
+
+    const applyFilter = (category) => {
+      menuItems.forEach((item) => {
+        const showItem = category === 'ទាំងអស់' || item.dataset.category === category;
+        item.classList.toggle('hidden', !showItem);
+      });
+    };
+
+    filterButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const category = button.dataset.filterCategory || 'ទាំងអស់';
+        setActiveFilter(button);
+        applyFilter(category);
+      });
+    });
+  }
+
   updateThemeButtons();
 })();

@@ -57,15 +57,14 @@
       <p class="mt-3 max-w-3xl text-black/75 dark:text-white/75">រីករាយជាមួយមុខម្ហូបពិសេសជាច្រើន ដែលរៀបចំយ៉ាងប្រណិត សម្រាប់លោកអ្នក។</p>
     </section>
 
-    <section class="mb-10 flex flex-wrap gap-3 text-sm font-semibold fade-up fade-delay-1">
-      <span class="rounded-full bg-spice-500 px-4 py-2 text-white">ទាំងអស់</span>
-      <span class="rounded-full border border-black/15 px-4 py-2 dark:border-white/20">ម្ហូបខ្មែរ</span>
-      <span class="rounded-full border border-black/15 px-4 py-2 dark:border-white/20">បួស</span>
-      <span class="rounded-full border border-black/15 px-4 py-2 dark:border-white/20">ភេសជ្ជៈ</span>
-      <span class="rounded-full border border-black/15 px-4 py-2 dark:border-white/20">បង្អែម</span>
+    <section data-menu-filters class="mb-10 flex flex-wrap gap-3 text-sm font-semibold fade-up fade-delay-1">
+      <button type="button" data-filter-category="ទាំងអស់" class="rounded-full bg-spice-500 px-4 py-2 text-white">ទាំងអស់</button>
+      <button type="button" data-filter-category="ម្ហូបខ្មែរ" class="rounded-full border border-black/15 px-4 py-2 dark:border-white/20">ម្ហូបខ្មែរ</button>
+      <button type="button" data-filter-category="ភេសជ្ជៈ" class="rounded-full border border-black/15 px-4 py-2 dark:border-white/20">ភេសជ្ជៈ</button>
+      <button type="button" data-filter-category="បង្អែម" class="rounded-full border border-black/15 px-4 py-2 dark:border-white/20">បង្អែម</button>
     </section>
 
-    <section class="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
+    <section data-menu-grid class="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
       <article class="glass-card overflow-hidden fade-up">
         <img class="h-52 w-full object-cover" src="assets/images/menu-fish-amok.jpg" alt="អាម៉ុកត្រី">
         <div class="space-y-3 p-5">
