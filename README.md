@@ -1,29 +1,44 @@
-# Mahob Taste - Web Design Assignment
+# Mahob Taste - Beginner Guide
 
-A responsive restaurant website project (topic: **Restaurant**) built with **Tailwind CLI**.
+This is a multi-page restaurant website project built with HTML, Tailwind CSS (CLI), and a little JavaScript.
+It is beginner-friendly and runs as a static website (no backend required).
 
-## Assignment checklist
+## 1. Project overview
 
-- [x] Minimum 5 pages (this project has 6 pages)
-- [x] Tailwind CLI workflow
-- [x] Dark/Light mode
-- [x] GitHub-ready source structure
-- [x] GitHub Pages-friendly static files
-- [x] Responsive mobile/tablet/desktop layout
+This project includes:
+- Responsive layout (mobile, tablet, desktop)
+- Dark/Light mode toggle
+- Multi-page site structure
+- Local assets (fonts, images, CSS, JS)
 
-## Pages
+Main pages:
+1. `index.html` - Home
+2. `menu.html` - Menu listing
+3. `detail.html` - Food details
+4. `auth.html` - Login/Register UI
+5. `about.html` - About page
+6. `contact.html` - Contact page
 
-1. `index.html` - Home/Landing
-2. `menu.html` - Listing page
-3. `detail.html` - Detail page
-4. `auth.html` - Authentication (Login/Register)
-5. `about.html` - About
-6. `contact.html` - Contact
+## 2. Tools you need (first time setup)
 
-## Beginner-friendly folder structure
+Install these first:
+1. [Node.js LTS](https://nodejs.org/) (includes npm)
+2. A code editor (recommended: VS Code)
+3. A modern browser (Chrome, Edge, Firefox)
+
+Check your installation:
+
+```bash
+node -v
+npm -v
+```
+
+If both commands show version numbers, you are ready.
+
+## 3. Project structure explained
 
 ```text
-y1s1b1_restaurants/
+Project-Webdesign/
 |- index.html
 |- menu.html
 |- detail.html
@@ -32,54 +47,126 @@ y1s1b1_restaurants/
 |- contact.html
 |- package.json
 |- package-lock.json
+|- README.md
 |- assets/
 |  |- css/
-|  |  |- input.css      # Tailwind source
-|  |  |- output.css     # Generated CSS file
+|  |  |- input.css      # Tailwind source file (you edit this)
+|  |  |- output.css     # Generated CSS file (build output)
 |  |- js/
-|  |  |- main.js        # Theme toggle + mobile menu
-|  |- fonts/            # Local static fonts
-|  |- images/           # Local static images
+|  |  |- main.js        # Theme toggle, mobile menu, menu filters
+|  |- fonts/            # Local fonts (Khmer + display fonts)
+|  |- images/           # Local image assets
 |- docs/
 |  |- PROJECT_REPORT.md
 |  |- PRESENTATION_GUIDE.md
 ```
 
-## Install and run
+## 4. How to run the project
+
+From the project root folder:
 
 ```bash
 npm install
 npm run build
 ```
 
-For development mode (auto-rebuild CSS):
+Then open `index.html` in your browser.
+
+## 5. Development workflow (recommended)
+
+When you edit styles often, run Tailwind in watch mode:
 
 ```bash
 npm run dev:css
 ```
 
-Then open `index.html` in your browser.
+What this does:
+- Watches `assets/css/input.css`
+- Regenerates `assets/css/output.css` automatically after changes
 
-## GitHub Pages deployment
+For production/minified CSS:
 
-1. Push this folder to a GitHub repository.
-2. Go to `Settings -> Pages`.
-3. Under `Build and deployment`, select:
+```bash
+npm run build:css
+```
+
+## 6. How to edit safely (beginner steps)
+
+1. Edit one file at a time.
+2. Save your file.
+3. Refresh browser.
+4. If style changes do not appear, make sure `npm run dev:css` is running.
+5. Keep image paths relative, for example: `assets/images/us.jpg`.
+
+## 7. Common issues and fixes
+
+### A) Styles not updating
+Possible causes:
+- `dev:css` is not running
+- `output.css` is outdated
+
+Fix:
+1. Run `npm run dev:css`
+2. Refresh browser with hard reload (`Ctrl+F5`)
+
+### B) Page looks broken suddenly
+Possible causes:
+- HTML syntax error
+- Merge conflict markers like `<<<<<<<`, `=======`, `>>>>>>>`
+
+Fix:
+1. Check the edited file for broken tags
+2. Remove any conflict markers
+3. Save and refresh
+
+### C) Images not showing
+Possible causes:
+- Wrong filename or path
+- Case mismatch in file name
+
+Fix:
+1. Verify file exists in `assets/images/`
+2. Verify exact same name in HTML
+
+## 8. Deployment (GitHub Pages)
+
+1. Push project to GitHub repository.
+2. Open repository `Settings`.
+3. Go to `Pages`.
+4. Set:
    - Source: `Deploy from a branch`
    - Branch: `main` (or your default branch)
    - Folder: `/ (root)`
-4. Save, then wait for GitHub Pages URL.
+5. Save and wait for deployment URL.
 
-## Design direction
+## 9. Beginner project report (short)
 
-- Inspired by [mahobkhmer.com](https://www.mahobkhmer.com/)
-- Warm culinary color palette (spice, sand, forest tones)
-- Elegant headline font + clean body font
-- Soft gradients and card surfaces
-- Simple motion (`fade-up` stagger)
-- Khmer localization with local Khmer fonts (`Koulen` for headings, `Battambang` for body)
+### Goal
+Build a Khmer food website that is responsive, visually clear, and easy to navigate.
 
-## Notes
+### What was implemented
+- 6 static pages
+- Tailwind CSS build workflow
+- Dark/Light mode toggle
+- Mobile menu behavior
+- Category-based filtering on menu page
+- Localized Khmer content and local font files
 
-- Forms are static UI only (no backend).
-- Fonts and images are now fully local static assets (no Google Fonts or Unsplash runtime dependency).
+### Challenges found
+- Merge conflict markers can break HTML rendering
+- Inconsistent list formatting in some detail sections
+- Category UI needed JavaScript to become functional
+
+### Solutions applied
+- Cleaned conflict markers
+- Standardized UI elements (including bullet consistency in ingredient sections)
+- Added interactive filtering logic in `main.js`
+
+### Current status
+Project is functional as a static front-end website and ready for presentation or GitHub Pages deployment.
+
+## 10. Notes
+
+- `auth.html` form is UI only (no real authentication backend yet).
+- `contact.html` is static (no API submission yet).
+- This project is ideal for front-end practice, then later upgrade to backend integration.
