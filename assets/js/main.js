@@ -68,22 +68,24 @@
     const filterButtons = Array.from(filterRoot.querySelectorAll('[data-filter-category]'));
     const menuItems = Array.from(menuGrid.querySelectorAll('article'));
 
-    const drinkKeywords = ['ភេសជ្ជៈ', 'ទឹក', 'ក្រឡុក', 'ល្ហុងក្រឡុក', 'កាហ្វេ', 'តែ', 'smoothie', 'juice'];
-    const dessertKeywords = ['បង្អែម', 'នំ', 'បបរ', 'ខ្ទិះ', 'ចេក', 'សាគូ', 'ត្នោត'];
+    const drinkTitleKeywords = ['ភេសជ្ជៈ', 'ទឹកដូង', 'ទឹកអំពៅ', 'ស្រាបៀរ', 'ក្រឡុក', 'smoothie', 'juice', 'soda', 'coffee', 'tea'];
+    const dessertTitleKeywords = ['សង្យា', 'នំត្នោត', 'នំអន្សម', 'នំំអន្សម', 'នំគម', 'នំស្លឹក', 'នំគ្រក់', 'នំចេកបុក'];
 
-    const classifyMenuItem = (text) => {
-      if (drinkKeywords.some((keyword) => text.includes(keyword))) {
+    const classifyMenuItem = (item) => {
+      const titleEl = item.querySelector('h2');
+      const title = (titleEl?.textContent || '').trim();
+
+      if (drinkTitleKeywords.some((keyword) => title.includes(keyword))) {
         return 'ភេសជ្ជៈ';
       }
-      if (dessertKeywords.some((keyword) => text.includes(keyword))) {
+      if (dessertTitleKeywords.some((keyword) => title.includes(keyword))) {
         return 'បង្អែម';
       }
       return 'ម្ហូបខ្មែរ';
     };
 
     menuItems.forEach((item) => {
-      const text = item.textContent || '';
-      item.dataset.category = classifyMenuItem(text);
+      item.dataset.category = classifyMenuItem(item);
     });
 
     const setActiveFilter = (activeButton) => {
